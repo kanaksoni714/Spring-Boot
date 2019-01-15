@@ -1,0 +1,20 @@
+package rest.restservice.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import rest.restservice.employee.Employee;
+
+public class EmployeeService {
+	@Autowired
+	private EmployeeRepository employeerepository;
+	
+	public List<Employee> getAllEmployees() {
+		return null;
+
+	}
+	public void addNewEmployee( Employee employee) {
+	
+	}
+}

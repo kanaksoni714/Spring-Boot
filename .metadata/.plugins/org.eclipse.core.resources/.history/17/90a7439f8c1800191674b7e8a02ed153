@@ -1,0 +1,14 @@
+package rest.restservice.service;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
+
+import rest.restservice.employee.Employee;
+@Repository
+public interface EmployeeRepository extends JpaRepository<Employee, Integer>{
+
+
+
+}

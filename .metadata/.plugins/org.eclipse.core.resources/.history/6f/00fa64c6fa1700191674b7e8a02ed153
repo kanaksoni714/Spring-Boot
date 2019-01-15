@@ -1,0 +1,13 @@
+package rest.restservice.service;
+
+import java.util.List;
+
+import rest.restservice.employee.Employee;
+
+public interface EmployeeService {
+
+	List<Employee> getAllEmployees();
+
+	void addNewEmployee(Employee employee);
+
+}

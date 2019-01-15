@@ -1,0 +1,29 @@
+package rest.restservice.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import rest.restservice.employee.Employee;
+
+public class EmployeeServiceImpl implements EmployeeService {
+	@Autowired
+	private EmployeeRepository repository;
+	
+	/* (non-Javadoc)
+	 * @see rest.restservice.service.EmployeeService#getAllEmployees()
+	 */
+	@Override
+	public List<Employee> getAllEmployees() {
+		
+		return repository.findAll();
+
+	}
+	/* (non-Javadoc)
+	 * @see rest.restservice.service.EmployeeService#addNewEmployee(rest.restservice.employee.Employee)
+	 */
+	@Override
+	public void addNewEmployee( Employee employee) {
+	 repository.save(employee);
+	}
+}

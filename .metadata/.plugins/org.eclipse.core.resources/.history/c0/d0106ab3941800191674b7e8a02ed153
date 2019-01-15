@@ -1,0 +1,48 @@
+package rest.restservice.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import rest.restservice.entity.Employee;
+import rest.restservice.repo.EmployeeRepository;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+	@Autowired
+	private EmployeeRepository repository;
+
+	@Override
+	public List<Employee> getAllEmployees() {
+
+		return repository.findAll();
+	}
+
+	@Override
+	public void addNewEmployee(Employee employee) {
+		repository.save(employee);
+	}
+
+	@Override
+	public void updateEmployee(Employee employee) {
+		repository.save(employee);
+
+	}
+	
+	@Override
+	public void deleteEmployee(int employeeID) {
+		Employee employee=repository.getOne(employeeID);
+		repository.delete(employee);
+
+	}
+
+	@Override
+	public void getEmployeeByID(int employeeID) {
+		repository.getOne(employeeID);
+	
+
+		
+		
+	}
+}

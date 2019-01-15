@@ -1,0 +1,5 @@
+package rest.restservice.resource;
+
+public class EmployeeResource {
+
+}

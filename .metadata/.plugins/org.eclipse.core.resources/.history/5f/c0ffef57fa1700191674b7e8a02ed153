@@ -1,0 +1,45 @@
+package rest.restservice.employee;
+
+import javax.persistence.Embeddable;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import rest.restservice.employee.address.Address;
+@Embeddable
+@Entity
+@Table(name = "EMP_TABLE")
+public class Employee {
+	@Id
+	public int employeeID;
+	private String employeeName;
+	private float Salary;
+	@Embedded
+	private Address address;
+	public int getEmployeeID() {
+		return employeeID;
+	}
+	public void setEmployeeID(int employeeID) {
+		employeeID = employeeID;
+	}
+	public String getEmployeeName() {
+		return employeeName;
+	}
+	public void setEmployeeName(String employeeName) {
+		employeeName = employeeName;
+	}
+	public float getSalary() {
+		return Salary;
+	}
+	public void setSalary(float salary) {
+		Salary = salary;
+	}
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+}
